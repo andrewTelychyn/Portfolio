@@ -1,0 +1,862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    color: white;
+}
+body {
+    position: relative;
+}
+
+section {
+    overflow: hidden;
+    position: fixed;
+    z-index: -2;
+}
+
+h1 {
+    font-size: 95px;
+    font-weight: 300;
+    letter-spacing: 9px;
+}
+
+h2 {
+    font-size: 75px;
+    letter-spacing: 4px;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+h6 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.block {
+    min-height: 900px;
+    height: 100vh;
+}
+
+#hello-div {
+    position: absolute;
+    /* height: 100%; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: black; */
+    z-index: 8;
+}
+
+#hello-div #text {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 200px;
+}
+
+#hello-div #text p {
+    position: absolute;
+    font-size: 350px;
+    font-weight: 100;
+    user-select: none;
+    line-height: 80%;
+    left: 0;
+    top: 500px;
+}
+
+#header {
+    background-color: none;
+    position: fixed;
+    height: 40px;
+    width: 100vw;
+    top: 90px;
+    padding-right: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+#logo {
+    font-weight: 300;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding-left: 7vw;
+    user-select: none;
+}
+
+#header-options {
+    margin-right: 1vw;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+#header-options li {
+    margin-left: 50px;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+#block-1 {
+    background-color: black;
+    position: relative;
+}
+
+.margin-left {
+    margin-left: 27vw;
+}
+
+.padding-left {
+    padding-left: 27vw;
+}
+
+#block-1 h2 {
+    position: absolute;
+    width: 60vw;
+    /* top: 365px; */
+    top: 37vh;
+    z-index: 2;
+    opacity: 0;
+}
+
+#image-frame-1 {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    left: 39vw;
+    width: 54vw;
+    height: 500px;
+    /* top: 320px; */
+    top: 33vh;
+}
+
+#image-frame-1 #image-1 {
+    object-fit: cover;
+    position: absolute;
+    width: 54vw;
+    min-width: 1000px;
+    right: -1000px;
+}
+
+#block-2 {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#block-2 h4 {
+    line-height: 140%;
+    width: 475px;
+    height: 355px;
+    max-width: 60vw;
+}
+
+#block-3 {
+    height: 100%;
+}
+
+#block-3 #black-area {
+    width: 100%;
+    min-height: 200px;
+    height: 17vw;
+    background-color: black;
+    position: relative;
+    z-index: 3;
+}
+
+#black-area .image-frame {
+    width: 75vw;
+    height: 34vw;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-frame #image-2 {
+    position: absolute;
+    object-fit: cover;
+    z-index: 2;
+    width: 75vw;
+    min-width: 750px;
+}
+/* .image-frame {
+    background-color: rgba(255, 255, 255, 0.3);
+} */
+
+.box-shadow {
+    box-shadow: 0 0 200px 170px black;
+    z-index: 2;
+}
+
+#block-3 #main-area {
+    width: 100%;
+    background-color: #212028;
+    position: relative;
+}
+
+#block-3 #text {
+    padding-top: max(300px, 25vw);
+    padding-bottom: 150px;
+    width: 700px;
+    max-width: 70vw;
+}
+
+#text h6 {
+    margin-bottom: 50px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 800px;
+    scrollbar-width: none;
+    /* padding-bottom: 200px; */
+}
+
+#projects #help {
+    position: absolute;
+    top: 160px;
+    left: -145px;
+    transform: rotate(-90deg);
+}
+
+#help h6 {
+    color: black;
+}
+
+#projects::-webkit-scrollbar {
+    display: none;
+}
+
+#projects li {
+    min-width: 700px;
+    height: 100%;
+    margin-right: 100px;
+    position: relative;
+}
+
+#projects .project-image {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+#project-info {
+    display: flex;
+    flex-direction: row;
+}
+
+#project-info > h5 {
+    width: 15%;
+    line-height: 55px;
+}
+
+#project-info .right-text {
+    display: block;
+    width: 80%;
+    min-height: 300px;
+    position: relative;
+}
+
+.right-text #main-text {
+    font-weight: 400;
+    line-height: 25px;
+    margin: 30px 0;
+}
+
+.right-text .more-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    user-select: none;
+    cursor: pointer;
+}
+
+#block-3-2 {
+    padding-bottom: 100px;
+    min-height: 100px;
+    width: 100%;
+    background-color: #212028;
+}
+
+#block-3-2 #inner-block {
+    background-color: white;
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+#inner-inner {
+    height: 100%;
+    position: relative;
+}
+
+#inner-inner h5,
+#inner-inner h3 {
+    color: black;
+}
+
+.project-arrow {
+    width: 150px;
+    height: 75px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    top: 6.5%;
+}
+
+#right-project-arrow {
+    right: 1vw;
+}
+
+#left-project-arrow {
+    left: -15vw;
+}
+
+#project-plus-info {
+    left: -75px;
+    top: 14vh;
+    height: 100%;
+    position: absolute;
+    max-width: 70vw;
+}
+
+#project-plus-info ul {
+    margin: 40px 0;
+    padding-left: 75px;
+}
+
+#project-plus-info a {
+    text-decoration: underline;
+}
+
+#project-plus-info ul li {
+    list-style-type: initial;
+    line-height: 30px;
+    padding-left: 8px;
+}
+
+#project-plus-info ul li::marker {
+    font-size: 10px;
+    color: black;
+}
+
+.project-edge {
+    position: absolute;
+    width: 750px;
+    height: 75px;
+    background-color: #212028;
+}
+
+#upper-edge {
+    top: 0;
+}
+
+#lower-edge {
+    bottom: 0;
+}
+
+#block-4 {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+#block-4 #text-frame-1 {
+    height: 100%;
+    position: absolute;
+    /* top: -30%; */
+    left: 0;
+    width: 100%;
+}
+
+#block-4 #text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#block-4 #text h1 {
+    width: 45vw;
+    min-width: 300px;
+    z-index: 2;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#block-5 {
+    position: relative;
+    height: 1175px;
+}
+
+#block-5 #text-frame-2 {
+    position: absolute;
+    padding: 200px 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: #212028;
+}
+
+#skills > li {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+    width: 1000px;
+    max-width: 60vw;
+    border-bottom: 1px solid #525157;
+}
+
+#skills #number {
+    line-height: 50px;
+    width: 120px;
+}
+
+#skills h3 {
+    width: 380px;
+    max-width: 70vw;
+}
+
+#skills ul {
+    margin-top: 8px;
+}
+
+#skills ul li {
+    list-style-type: initial;
+    padding-left: 8px;
+}
+
+#skills ul li h5 {
+    line-height: 150%;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+#skills ul li::marker {
+    font-size: 10px;
+}
+
+#project-image-1 {
+    background: url("projects/ChatApp/3.jpg") no-repeat;
+    background-size: contain;
+}
+
+#project-image-2 {
+    background: url("projects/SocialApp/1.jpg") no-repeat;
+    background-size: contain;
+}
+
+#project-image-3 {
+    background: url("projects/Skoda/1.jpg") no-repeat;
+    background-size: contain;
+}
+
+#project-image-4 {
+    background: url("projects/ToDoList/1.jpg") no-repeat;
+    background-size: contain;
+}
+
+#project-image-5 {
+    background: url("projects/Calculator/1.jpg") no-repeat;
+    background-size: contain;
+}
+
+#block-6 {
+    background-color: black;
+    position: relative;
+}
+
+#image-frame-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Photo03.png");
+    background-size: 100% 100% no-repeat;
+    display: flex;
+    align-items: center;
+    background-position: 50% 50%;
+}
+
+#image-frame-3 #text {
+    margin-left: 15vw;
+    margin-top: 100px;
+}
+
+#image-frame-3 h3 {
+    line-height: 190%;
+}
+
+#image-frame-3 ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+    width: 50vw;
+    max-width: 500px;
+}
+
+#image-frame-3 ul a,
+#image-frame-3 ul a span {
+    color: #525157;
+}
+
+#block-4 {
+    height: 120vh;
+}
+
+#hr-email {
+    width: 0%;
+    opacity: 0;
+    background-color: white;
+    height: 2.5px;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1350px) {
+    #inner-block {
+        min-height: max(1200px, 135vh);
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+    #inner-block {
+        min-height: max(1200px, 150vh);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #skills > li {
+        display: block;
+    }
+    #skills ul {
+        margin: 30px 0;
+    }
+
+    #block-5 {
+        height: 1700px;
+    }
+    #hello-div #text {
+        height: 180px;
+    }
+    #hello-div #text p {
+        font-size: 220px;
+    }
+    .project-arrow {
+        width: 100px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    h2 {
+        font-size: 45px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+    #header-options {
+        display: none;
+    }
+
+    .margin-left {
+        margin-left: 100px;
+    }
+
+    .padding-left {
+        padding-left: 100px;
+    }
+
+    #text h6 {
+        margin-bottom: 30px;
+    }
+
+    #logo {
+        padding-left: 80px;
+    }
+    #image-frame-1 #image-1 {
+        min-width: 800px;
+    }
+    #projects #help {
+        display: none;
+    }
+    #project-plus-info {
+        max-width: 87vw;
+    }
+
+    #left-project-arrow {
+        left: -10vw;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 750px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    #projects li {
+        min-width: 500px;
+        margin-right: 65px;
+    }
+    .project-edge {
+        width: 500px;
+    }
+
+    #projects .project-image {
+        /* max-height: 300px; */
+        max-height: 250px;
+        margin-bottom: 50px;
+    }
+    #block-5 {
+        height: 1475px;
+    }
+
+    #block-1 #image-frame-1 {
+        height: 400px;
+    }
+
+    #hello-div #text {
+        height: 120px;
+    }
+    #hello-div #text p {
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 45px;
+    }
+    #block-5 {
+        height: 1550px;
+    }
+    #black-area .image-frame {
+        width: 100%;
+    }
+    #project-info {
+        flex-direction: column;
+    }
+    #project-info .right-text {
+        width: 100%;
+    }
+    #block-1 #image-frame-1 {
+        height: 300px;
+        left: 25vw;
+        width: 70vw;
+        top: 320px;
+    }
+    .block {
+        min-height: 600px;
+    }
+    #block-1 h2 {
+        width: 85vw;
+        top: 260px;
+    }
+    .project-edge {
+        width: 350px;
+        height: 50px;
+    }
+    #projects li {
+        min-width: 350px;
+        margin-right: 50px;
+    }
+    #projects {
+        padding-bottom: 0px;
+        height: 700px;
+    }
+    #projects .project-image {
+        margin-bottom: 50px;
+        /* max-height: 200px; */
+        margin-bottom: 35px;
+        max-height: 175px;
+    }
+    #image-frame-3 {
+        background-position: 55% 45%;
+    }
+    #hr-email {
+        height: 1px;
+    }
+    #hello-div #text {
+        height: 60px;
+    }
+    #hello-div #text p {
+        font-size: 80px;
+    }
+
+    #project-plus-info {
+        left: -30px;
+    }
+
+    #project-plus-info ul {
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 550px) {
+    #logo {
+        font-size: 15px;
+    }
+    .margin-left,
+    #image-frame-3 #text {
+        margin-left: 65px;
+    }
+    .padding-left {
+        padding-left: 65px;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 750px) {
+    #image-frame-3 ul {
+        min-width: 350px;
+    }
+    #inner-block {
+        min-height: max(135vh, 1200px);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #logo {
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 15px;
+    }
+    #image-frame-3 ul {
+        margin-right: 50px;
+        min-width: 200px;
+    }
+    #block-6 a span {
+        display: none;
+    }
+    #instagram::after {
+        content: "INST";
+    }
+    #facebook::after {
+        content: "FCBK";
+    }
+    #telegram::after {
+        content: "TLGM";
+    }
+
+    #block-6 h3 {
+        font-size: 20px;
+    }
+
+    .margin-left,
+    #image-frame-3 #text {
+        margin-left: 45px;
+    }
+
+    .padding-left {
+        padding-left: 45px;
+    }
+
+    #block-2 h4 {
+        max-width: 70vw;
+    }
+    #block-5 {
+        height: 1500px;
+    }
+    .project-edge {
+        width: 250px;
+    }
+    #projects li {
+        min-width: 250px;
+        margin-right: 35px;
+    }
+    #projects .project-image {
+        margin-bottom: 50px;
+        /* max-height: 150px; */
+        margin-bottom: 35px;
+        max-height: 125px;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 450px) {
+    #inner-block {
+        min-height: max(160vh, 1350px);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #inner-block {
+        min-height: max(185vh, 1450px);
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 550px) {
+    #block-5 {
+        height: 1500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .image-frame #image-2 {
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    #image-frame-3 {
+        background-size: 100% auto;
+    }
+}
