@@ -277,6 +277,16 @@ let content = {
         '<a href="https://github.com/andrewTelychyn/SocialApp" target="_blank"><h3>GitHub</h3></a>',
 }
 
+let heights = {
+    360: "max(185vh, 1450px)",
+    450: "max(160vh, 1350px)",
+    750: "max(135vh, 1200px)",
+    1000: "max(1200px, 150vh)",
+    1350: "max(1200px, 135vh)",
+    8000: "max(1050px, 100vh)",
+}
+let heightsKeys = Object.keys(heights)
+
 let chosenId
 let keys = Object.keys(content)
 const showMoreFunc = (e) => {
@@ -292,9 +302,23 @@ const showMoreFunc = (e) => {
         document.getElementById("project-plus-info").innerHTML =
             content[e.target.id]
 
-        showMoreTimeline.to("#inner-block", 2, {
-            height: "max(1050px, 100vh)",
-        })
+        let currentWidth = document
+            .getElementById("inner-block")
+            .getBoundingClientRect().width
+
+        let widthValue
+
+        for (let elem of heightsKeys) {
+            if (elem > currentWidth) {
+                widthValue = heights[elem]
+                break
+            }
+        }
+        showMoreTimeline.fromTo(
+            "#inner-block",
+            { height: "0px" },
+            { height: widthValue, duration: 2 }
+        )
         showMore = true
     } else {
         let currentArrow =

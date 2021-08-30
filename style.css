@@ -237,7 +237,7 @@ h6 {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     height: 800px;
     scrollbar-width: none;
     /* padding-bottom: 200px; */
@@ -318,6 +318,7 @@ h6 {
     height: 0px;
     overflow: hidden;
     position: relative;
+    /* height: -webkit-fill-available; */
 }
 
 #inner-inner {
@@ -349,7 +350,7 @@ h6 {
 
 #project-plus-info {
     left: -75px;
-    top: 14vh;
+    top: 22vh;
     height: 100%;
     position: absolute;
     max-width: 70vw;
@@ -561,18 +562,6 @@ h6 {
     height: 2.5px;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1350px) {
-    #inner-block {
-        min-height: max(1200px, 135vh);
-    }
-}
-
-@media screen and (min-width: 750px) and (max-width: 1000px) {
-    #inner-block {
-        min-height: max(1200px, 150vh);
-    }
-}
-
 @media screen and (max-width: 1200px) {
     #skills > li {
         display: block;
@@ -637,6 +626,9 @@ h6 {
     }
     #projects #help {
         display: none;
+        /* top: -20px;
+        left: 20px;
+        transform: rotate(0deg); */
     }
     #project-plus-info {
         max-width: 87vw;
@@ -767,9 +759,6 @@ h6 {
     #image-frame-3 ul {
         min-width: 350px;
     }
-    #inner-block {
-        min-height: max(135vh, 1200px);
-    }
 }
 
 @media screen and (max-width: 450px) {
@@ -827,18 +816,6 @@ h6 {
         /* max-height: 150px; */
         margin-bottom: 35px;
         max-height: 125px;
-    }
-}
-
-@media screen and (min-width: 361px) and (max-width: 450px) {
-    #inner-block {
-        min-height: max(160vh, 1350px);
-    }
-}
-
-@media screen and (max-width: 360px) {
-    #inner-block {
-        min-height: max(185vh, 1450px);
     }
 }
 
